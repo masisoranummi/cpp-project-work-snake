@@ -2,8 +2,9 @@
 #define SNAKEHEAD_H
 
 #include "SnakeBody.h"
+#include "SnakePart.h"
 
-class SnakeHead {
+class SnakeHead: public SnakePart {
 public:
     SnakeHead(int screenWidth, int screenHeight, wchar_t* screen);
     void move();
@@ -14,8 +15,6 @@ public:
     int getYDir();
     int getXDir();
     void paint();
-    int positionX;
-    int positionY;
 
 private:
     int screenWidth;

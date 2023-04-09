@@ -1,7 +1,9 @@
 #ifndef SNAKEBODY_H
 #define SNAKEBODY_H
 
-class SnakeBody {
+#include "SnakePart.h"
+
+class SnakeBody: public SnakePart {
 public:
     SnakeBody(int x, int y);
     void move(int x, int y);
@@ -12,8 +14,6 @@ public:
     void paint(int screenWidth, int screenHeight, wchar_t* screen);
 
 private:
-    int positionX;
-    int positionY;
     SnakeBody* next;
 };
 

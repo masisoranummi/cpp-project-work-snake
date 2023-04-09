@@ -1,10 +1,9 @@
 #include "SnakeBody.h"
+#include "SnakePart.h"
 
 // Tehdään null seuravaasta koska bodyt
 // luodaan aina siten että ne ovat viimeisenä jonossa
-SnakeBody::SnakeBody(int x, int y) {
-    positionX = x;
-    positionY = y;
+SnakeBody::SnakeBody(int x, int y) : SnakePart(x,y) {
     next = nullptr; 
 }
 

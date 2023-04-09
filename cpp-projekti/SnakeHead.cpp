@@ -1,4 +1,5 @@
 #include "SnakeHead.h"
+#include "SnakePart.h"
 #include <string.h>
 #include <iostream>
 
@@ -8,12 +9,10 @@
 #define DOWN 0
 
 // SnakeHead on se mitä pelaaja liikuttaa, ja muu keho seuraa päätä
-SnakeHead::SnakeHead(int screenWidth, int screenHeight, wchar_t* screen) {
+SnakeHead::SnakeHead(int screenWidth, int screenHeight, wchar_t* screen): SnakePart(30, 10) {
     this->screenWidth = screenWidth;
     this->screenHeight = screenHeight;
     this->screen = screen;
-    positionX = 30;
-    positionY = 10;
     direction = LEFT;
     body = nullptr;
     tail = nullptr;
